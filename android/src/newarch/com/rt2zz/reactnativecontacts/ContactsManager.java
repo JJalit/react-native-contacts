@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.rt2zz.reactnativecontacts.impl.ContactsManagerImpl;
 
@@ -25,6 +26,46 @@ public class ContactsManager extends NativeContactsSpec implements ActivityEvent
         super(reactContext);
         this.contactsManagerImpl = new ContactsManagerImpl(reactContext, true);
         reactContext.addActivityEventListener(this);
+    }
+
+    @Override
+    public void removeContactsFromGroup(String groupId, ReadableArray contactIds, Promise promise) {
+        // TODO: implement or handle as needed
+    }
+
+    @Override
+    public void getGroups(Promise promise) {
+        // TODO: implement or handle as needed
+    }
+
+    @Override
+    public void getGroup(String groupId, Promise promise) {
+        // TODO: implement or handle as needed
+    }
+
+    @Override
+    public void deleteGroup(String identifier, Promise promise) {
+
+    }
+
+    @Override
+    public void updateGroup(String identifier, ReadableMap groupData, Promise promise) {
+
+    }
+
+    @Override
+    public void addGroup(ReadableMap group, Promise promise) {
+
+    }
+
+    @Override
+    public void contactsInGroup(String identifier, Promise promise) {
+
+    }
+
+    @Override
+    public void addContactsToGroup(String groupIdentifier, ReadableArray contactIdentifiers, Promise promise) {
+
     }
 
     /*
@@ -272,3 +313,4 @@ public class ContactsManager extends NativeContactsSpec implements ActivityEvent
     }
 
 }
+
